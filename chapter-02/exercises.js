@@ -4,22 +4,55 @@
 ////////////////////////////////////////////////////////////////////////////////
 //n represents the number of "rows"
 function triangles(n) {
+  // loop through from 1 to number
+  for(i = 1; i <= n; i++){
+    // print #. repeat for every i
+    console.log("#".repeat(i))
+  }
   
+
 }
 ////////////////////////////////////////////////////////////////////////////////
 // fizzBuzz ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function fizzBuzz() {
+function fizzBuzz(n) {
+  for (let i = 1; i <= 15; i++){
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzbuzz")
+    } else if (i % 5 === 0){
+      console.log("buzz")
+    } else if (i % 3 === 0){
+        console.log("fizz")
+  }   else {console.log(i)
+          }
+  } 
   
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard(n) {
+function drawChessboard(number) {
+  let pattern = "";
+  //use nested for loops to create the board
+  for (let i = 1; i <= number; i++) {
 
+    // add a newline to the pattern
+    // pattern += '\n';
+    for (let j = 1; j <= number; j++) {
+      // if the increments added together are even, add a space.
+      if ((i + j) % 2 === 0) {
+        pattern += " " ;
+        // else add a #
+      } else {
+        pattern += "#"; 
+      }
+    }   pattern += '\n';
+
+  } console.log(pattern)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
