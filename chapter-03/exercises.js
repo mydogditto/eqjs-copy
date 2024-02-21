@@ -2,31 +2,80 @@
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function min() {
-
+function min(num1, num2) {
+  // if num1 is < num2
+  if(num1 < num2 ){
+    // return num1
+    return num1
+    // if num2 is < num1
+  } else if(num2 < num1){
+     // return num2
+    return num2
+  }
+  if(num1 === num2){
+    return 0
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function isEven() {
-
+function isEven(number) {
+// base case
+// number is 0 then return true
+// if number is 1 return false
+if(number === 0){
+  return true
+} else if(number === 1){
+  return false
+  // recursive case 
+} else if(number < 0){
+  return isEven(-number)
+} else {
+  return isEven(number - 2)
+}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
+function countChars(string, char) {
+// set up a couting variable 
+let count = 0
+// loop through string
+for(let i = 0; i < string.length; i++){
+  // if the current index is = to char
+  if(string[i] === char){
+    // add 1 to the count 
+    count += 1
+  }
+ 
+}
+ // return the count 
+ return count 
 
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function countBs() {
+//Write a function countBs that takes a string as its only argument
+// and returns a number that 
+//indicates how many uppercase “B” characters there are in the string.
+function countBs(string) {
+// inishalize a counting variable 
+let count = 0
+// loop through the string
+for(let i = 0; i < string.length; i++){
+  // if the current element is an "B" add 1 to count
+  if(string[i]=== "B"){
+    count += 1
+  }
+}
+// return count 
+return count 
 
 }
 
