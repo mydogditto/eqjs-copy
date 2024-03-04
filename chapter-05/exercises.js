@@ -38,8 +38,24 @@ function every(array, func) {
 // dominantDirection ///////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function dominantDirection() {
-
+function dominantDirection(string) {
+  let rtl = []
+  let ltr = []
+  for(let i = 0; i < string.length; i++){
+    let script = characterScript(string.CharCodeAt(i))
+    if(string !== null){
+      if(string.direction === ltr){
+        ltr.push(script)
+      } else{
+        rtl.push(script)
+      }
+    }
+  }
+if(ltr.length > rtl.length){
+  return ltr
+} else{
+  return rtl
+}
 }
 
 // /////////////////////////////////////////////////////////////////////////////
